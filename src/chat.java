@@ -2,9 +2,6 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 
-//ran by doing the following on the command line in chat.java directory
-//"javac chat.java"
-//"java chat arg0" where arg0 is the specified port number that they want to use
 public class chat {
 
     //public static ArrayList<String> iPAddress = new ArrayList<String>();
