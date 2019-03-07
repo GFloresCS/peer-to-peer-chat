@@ -1,3 +1,3 @@
 # chat
 Project 1: Peer to peer chat service.
-Fixed the IP address being wrong on the list of the Host
+Implemented the rest of the commands as well as some of the specified things such as "the message can only ne 100 cahracters including blank spaces"
