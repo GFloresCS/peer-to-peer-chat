@@ -8,7 +8,8 @@ A Chat Application for Remote Message Exchange
 Gustavo was in charge of the Server/Host part of the application and Giovanni was in charge of the Client part of the application.
 Giovanni worked on the ConnectionLists.java file which was where each process would store the information of each connection whether
 it was the host or the client. This file also stored the actual objects (Handler and Client) that were used to communicate with
-each peer. Giovanni also worked on the Client.java file which established the connection to the host port and handled messages received from the host with appropriate actions. The Client class was extended as a thread so the user could connect to multiple hosts.
+each peer. Giovanni also worked on the Client.java file which established the connection to the host port and handled messages received 
+from the host with appropriate actions. The Client class was extended as a thread so the user could connect to multiple hosts.
 Gustavo worked on the Server.java file which created a new Handler for each connection made to the host port that ran at the same time
 by extending it as a Thread. This also allowed the user to receive multiple and separate clients. Gustavo also worked on the 
 Handler.java file which handled messages recieved from the client with appropriate actions.
@@ -16,13 +17,18 @@ Both Giovanni and Gustavo worked on the Chat.java file which was the main class 
 have the main java file running smoothly.
 
 *How to install any prerequisites, build your program, and run our application.*
-We made our project using java only so you can run our project by exporting the files into your desired destination. 
+We made our project using java only so you can run our application by exporting the files into your desired destination. 
 You can then open it using any IDE used for java files or you can use the command prompt to run it. 
-To run it on the command prompt you simply open up the command prompt and enter the directy of the source files.
-Once you're in the src directory or the directory with all of the .java files you can use the command "javac *.java" to compile all of 
-the java files. After compiling the java files you can run the main class by using the command "java Chat" which will give 
-you a random port number. However if you run it as "java Chat 4000" for example, that will run the main class with the port number of 4000.
-You can run the program with any port number from 1024 to 49151
+To run it on the command prompt you simply open up the command prompt and enter the directy of the source files if you have ran 
+java files on the command line before (Skip to the * if you have already ran a java file on the command prompt and don't require 
+further instructions). If not, you will need to download the latest JDK version
+(https://www.oracle.com/technetwork/java/javase/downloads/index.html) copy the directory of the bin path and then go 
+to Select Start -> Computer -> System Properties -> Advanced System Settings -> Environment Variables -> System Variables -> PATH 
+this will make sure the javac can be used to compile the java files. 
+*Once you're in the src directory or the directory with all of the .java files you can use the command "javac *.java" to compile all 
+of  the java files. After compiling the java files you can run the main class by using the command "java Chat" which will give you 
+a random port number. However if you run it as "java Chat 4000" for example, that will run the main class with the port number of 4000.
+You can run the program with any portnumber from 1024 to 49151
 
 *Resources.*
 1)https://www.geeksforgeeks.org/socket-programming-in-java/
