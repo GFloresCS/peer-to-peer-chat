@@ -29,7 +29,6 @@ public class Client extends Thread{
     public void run() {
         try
         {
-            //String tosend = "";
             String received = "";
             String[] tokenAns = null;
 
