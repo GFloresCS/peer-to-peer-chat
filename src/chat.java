@@ -201,7 +201,7 @@ public class chat {
     //check if its the connected peer is host or client, since we're storing 2 objects in the array
     public static void send(String[] tokenAns, ConnectionLists connections, ConnectionLists list) {
         String message;
-        if(isInteger(tokenAns[1]) && Integer.parseInt(tokenAns[1]) <= connections.size()){
+        if(isInteger(tokenAns[1]) && Integer.parseInt(tokenAns[1]) <= connections.size() && Integer.parseInt(tokenAns[1]) > 0){
             message = fuseMessage(tokenAns);
             if(message.equalsIgnoreCase("Too Long")) {
                 System.out.println("This message is too long, make sure it is 100 characters or less .");
