@@ -136,7 +136,7 @@ public class Chat
 				
 				//Sends a message to the specified client/host
 				case "send":
-					if(tokenAns.length != 3)
+					if(tokenAns.length < 3)
 					{
 						System.out.println("Error: Follow the format 'send <connection id> <message>'");
 					}
