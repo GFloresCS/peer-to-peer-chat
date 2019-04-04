@@ -23,19 +23,17 @@ public class Server extends Thread
 		//Socket stays open to retrieve requests
 		while(true)
 		{
-			Socket sock = null;
-			
 			try
 			{
 				//Socket object to receive incoming client requests
-				sock = serverS.accept();
-				
+				Socket sock = serverS.accept();
+
 				System.out.println("A new client is connected.");
-				
+
 				//Obtaining input and output streams
 				DataInputStream dis = new DataInputStream(sock.getInputStream());
 				DataOutputStream dos = new DataOutputStream(sock.getOutputStream());
-				
+
 				//Create a new Handler
 				Handler handle = new Handler(sock, dis, dos, list);
 				handle.start();
@@ -43,7 +41,8 @@ public class Server extends Thread
 			}
 			catch(Exception e)
 			{
-				System.out.println("Closing server socket...");
+				System.out.println("Server closed.");
+				break;
 			}
 		}
 	}
