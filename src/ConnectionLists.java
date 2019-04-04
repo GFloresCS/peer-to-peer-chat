@@ -4,7 +4,9 @@ public class ConnectionLists
 {
 	private static ArrayList<String> iPAddress = new ArrayList<>();
 	private static ArrayList<Object> connections = new ArrayList<>();
-	
+
+	//Stores both clients and hosts(handlers) in an easy to identify format
+	//<ip> <port> <host/client>
 	public void addList(String newClient)
 	{
 		iPAddress.add(newClient);
@@ -28,16 +30,10 @@ public class ConnectionLists
 	}
 	
 	//Both lists should be the same size in order to be synced
-	public boolean synced()
-	{
-		return iPAddress.size() == connections.size();
-	}
+	public boolean synced() { return iPAddress.size() == connections.size(); }
 	
 	//Retrieves the actual reference to the Handler or Client objects
-	public Object get(int index)
-	{
-		return connections.get(index);
-	}
+	public Object get(int index) { return connections.get(index); }
 	
 	public boolean isClient(int index)
 	{
@@ -55,32 +51,16 @@ public class ConnectionLists
 		iPAddress.remove(id);
 		connections.remove(id);
 	}
-	
-	public void removeLastCon()
-	{
-		connections.remove(connections.size() - 1);
-	}
-	
-	public boolean isEmpty()
-	{
-		if(iPAddress.isEmpty() && connections.isEmpty())
-		{
-			return true;
-		}
-		return false;
-	}
+	//list is not synced so remove the last connection, only used if there are more connections
+	public void removeLastCon() { connections.remove(connections.size() - 1); }
+
+	public boolean isEmpty() { return iPAddress.isEmpty() && connections.isEmpty(); }
 	
 	//Status refers to either host or client
 	//The item must be in the ArrayList to get the id
-	public int getID(String ipPortStatus)
-	{
-		return iPAddress.indexOf(ipPortStatus);
-	}
+	public int getID(String ipPortStatus) { return iPAddress.indexOf(ipPortStatus); }
 	
-	public boolean contains(String entry)
-	{
-		return iPAddress.contains(entry);
-	}
+	public boolean contains(String entry) { return iPAddress.contains(entry); }
 	
 	public void printList()
 	{
@@ -92,5 +72,7 @@ public class ConnectionLists
 			System.out.printf("%-14d%-22s%-22s%-22s\n", count, ipPort[0], ipPort[1], ipPort[2]);
 		}
 		System.out.println();
+		/*System.out.println(connections);
+		System.out.println("Number of threads: "+Thread.activeCount());*/
 	}
 }

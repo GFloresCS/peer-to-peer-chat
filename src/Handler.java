@@ -100,7 +100,7 @@ public class Handler extends Thread
 					}
 					catch(NullPointerException e)
 					{
-						System.out.println("Error retrieving message");
+						//System.out.println("Error retrieving message");
 					}
 				}
 			}
@@ -168,11 +168,11 @@ public class Handler extends Thread
 			
 			if(iClosedIt)
 			{
-				System.out.println("A connection has been closed with ip and port number: [" + theirIP + "] [" + theirPort + "]>");
+				System.out.print("A connection has been closed with ip and port number: [" + theirIP + "] [" + theirPort + "]\n>");
 			}
 			else
 			{
-				System.out.println("The other peer with ip and port number: [" + theirIP + "] [" + theirPort + "] has terminated your connection.>");
+				System.out.print("The peer with ip and port number: [" + theirIP + "] [" + theirPort + "] has terminated your connection.\n>");
 			}
 		}
 		catch(Exception e)

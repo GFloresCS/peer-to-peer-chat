@@ -165,11 +165,11 @@ public class Client extends Thread
 			
 			if(iClosedIt)
 			{
-				System.out.print("A connection has been closed with ip and port number: [" + ip + " ] [" + port + "]\n>");
+				System.out.print("A connection has been closed with ip and port number: [" + ip + "] [" + port + "]\n>");
 			}
 			else
 			{
-				System.out.print("The other peer with ip and port number: [" + ip + " ] [" + port + "] has terminated your connection.\n>");
+				System.out.print("The peer with ip and port number: [" + ip + "] [" + port + "] has terminated your connection.\n>");
 			}
 		}
 		catch(Exception e)
