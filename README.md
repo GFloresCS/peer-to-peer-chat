@@ -36,5 +36,5 @@ You can run the program with any portnumber from 1024 to 49151
 We used the first link to get an understanding of how sockets worked and how to implement a simple client and host chat in java, however 
 in this example the host could only accept one client
 We used the second link to show us a more effect client and host chat since this example had a host that could support multiple 
-clients at a time. We used this example to help us understanding how we should implement our own chat application.
+clients at a time. We used this example to help us understand how we should implement our own chat application.
 
