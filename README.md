@@ -38,3 +38,4 @@ in this example the host could only accept one client
 We used the second link to show us a more effect client and host chat since this example had a host that could support multiple 
 clients at a time. We used this example to help us understand how we should implement our own chat application.
 
+![Peer-to-peer-chat](https://user-images.githubusercontent.com/43160933/172678827-de348dfb-74d9-492a-b4c5-0c6e1a241e72.png)
